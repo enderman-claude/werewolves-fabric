@@ -1,61 +1,39 @@
-Werewolves for Minecraft 1.16 - Latest branch
-====
+# Werewolves — Fabric port (Minecraft 1.16.5)
 
+> **Migration progress: 0%.** Nothing has been ported yet. This repository currently contains the unmodified Forge source of Werewolves, plus this README.
 
-![](dev_resources/project/werewolves-title.png)
-[![](http://cf.way2muchnoise.eu/short_417851_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/werewolves-become-a-beast)
-[![Java CI](https://github.com/TeamLapen/Werewolves/workflows/Java%20CI/badge.svg?branch=1.16)](https://github.com/TeamLapen/Werewolves/actions)
-[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
-[![Discord Server](https://img.shields.io/discord/430326060635258881)](https://discord.gg/wuamm4P)
-[![Crowdin](https://badges.crowdin.net/werewolves/localized.svg)](https://crowdin.com/project/werewolves)
+This is an unofficial Fabric port of **Werewolves** by TeamLapen (Cheaterpaul and contributors). It is **not** the original project and is not affiliated with or endorsed by its authors.
 
-## Mod Description
+## Original project
 
-Werewolves are fast, strong and hungry entities, which do not like to be seen, but don't fear to fight. With this mod
-you cannot only become a Vampire or Hunter, but a Werewolf to fight you own way through.
-
-This mod allows you to become a werewolf with all its benefits and drawbacks.
-
-## Links
-
-Download: [Curseforge](https://www.curseforge.com/minecraft/mc-mods/werewolves-become-a-beast)  
-Translate: [Crowdin](https://crowdin.com/project/werewolves)
-
-Vampirism [Github](https://github.com/TeamLapen/Vampirism)  
-Vampirism [Curseforge](https://www.curseforge.com/minecraft/mc-mods/vampirism-become-a-vampire)
-
-## People
-
-- [Cheaterpaul](https://github.com/Cheaterpaul) _Everything_
-
-## Special Thanks to
-
-- [maxanier](https://maxanier.de) _Vampirism_
-- [RebelT](https://github.com/TheRebelT) _Models & Textures_
-- [1LiterZinalco](https://lunofe.de/) _Models_
-- Йода _Textures_
-- CritterCarnival _Textures_
-- Talonerd _Textures_
-
-## Setup Gradle build script and Maven mirror
-
-[Gradle setup](docs/GRADLE.md)
+- Source: https://github.com/TeamLapen/Werewolves (branch `1.16`)
+- Please check out the original repository for the real, supported mod.
+- Werewolves depends on Vampirism. The Vampirism port is at https://github.com/enderman-claude/vampirism-fabric (0% migrated). This port will depend on that one, not the original Vampirism.
 
 ## Licence
 
-This mod is licenced under [LGPLv3](https://raw.githubusercontent.com/TeamLapen/Werewolves/master/LICENSE)
+- Licensed under the **GNU Lesser General Public License v3.0** (see `LICENSE`), as in the original.
+- Original copyright and licence notices are kept. Changes made in this port will be marked as such.
 
-##### Textures
+## Version note
 
-```
-Any textures (and models) included in the mod may be used, remixed and distributed for anything related to Vampirism or Werewolves (fan art, addon mods, forks, reviews, ...) excluding resource packs.
-If you want to use them in a resource/texture pack, you must credit the Werewolves project or the individual creator where applicable and it must not be used commercially.
-```
+The source in this repository is version **1.0.4** (`gradle.properties`), while the jar the port was started from is **1.1.0.3**. Differences between the two are not yet checked.
 
-##### Sounds
+## Milestones
 
-This mod these sounds from freesound.org:
+Each milestone needs to be tested in a Fabric dev client by the maintainer before it is ticked. Fabric API is the only intended dependency, plus the Fabric Vampirism port once it exists.
 
-- monster020a by missozzy - https://freesound.org/people/missozzy/sounds/169985/ -- License: CC Attribution
-- wolf by Robinhood76 - https://freesound.org/people/maljwilliams/sounds/565848/
-- Lake Monster 27 by Debsound - https://freesound.org/people/Debsound/sounds/332487/ -- License: CC Attribution
+- [ ] **M0 — Scaffold:** Fabric Loom project for 1.16.5, builds and launches with no mod content.
+- [ ] **M1 — Vampirism dependency:** link against the Fabric Vampirism port (blocked until Vampirism reaches its core milestones).
+- [ ] **M2 — Registries and event bus:** items, entities, and effects registered through Fabric; Forge event subscriptions replaced (about 192 Java files in total across the mod).
+- [ ] **M3 — Capabilities:** Forge capabilities replaced with Fabric attachments or a custom equivalent.
+- [ ] **M4 — Networking:** Forge packets replaced with Fabric networking.
+- [ ] **M5 — Configuration:** `ForgeConfigSpec` replaced.
+- [ ] **M6 — Rendering and client:** werewolf models, renderers, and GUIs ported.
+- [ ] **M7 — Data and assets:** recipes, loot tables, tags, and models in place.
+- [ ] **M8 — Werewolf core:** transformation and main werewolf abilities working.
+- [ ] **M9 — Remaining features:** everything not covered above.
+
+## Status log
+
+- 2026-11-18: Repository created from the 1.16 branch of upstream. No code changes yet.
